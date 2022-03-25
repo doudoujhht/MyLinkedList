@@ -9,8 +9,11 @@ public class MyLinkedList {
     public MyLinkedList() {
         this.head=null;
     }
-    public MyLinkedList(Node head){
-        this.head=head;
+    public MyLinkedList(String... args) {
+        for (String arg : args) {
+            Node node=new Node(arg);
+            this.addToTail(node);
+        }
     }
 
     public MyLinkedList(Node... args) {
