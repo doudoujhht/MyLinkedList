@@ -43,5 +43,22 @@ public class MyLinkedList {
         return output.toString();
     }
 
+    public Node removeTail(){
+        Node current=this.head;
+        while (current.getNext().getNext()!=null){
+            current=current.getNext();
+        }
+        Node tail=current.getNext();
+        current.setNext(null);
+        return tail;
+    }
+
+    public Node removeHead(){
+        Node current=head;
+        head=head.getNext();
+        return current;
+
+    }
+
 
 }
