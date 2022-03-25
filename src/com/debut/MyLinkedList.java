@@ -3,13 +3,20 @@ package com.debut;
 import java.util.LinkedList;
 
 public class MyLinkedList {
-    public Node head;
+    public Node head;// le premier element de la liste
 
+    // un contructeur qui initialise une liste vide
     public MyLinkedList() {
         this.head=null;
     }
     public MyLinkedList(Node head){
         this.head=head;
+    }
+
+    public MyLinkedList(Node... args) {
+        for (Node arg : args) {
+            this.addToTail(arg);
+        }
     }
 
     public void addToHead(Node add){

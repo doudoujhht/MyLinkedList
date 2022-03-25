@@ -3,6 +3,8 @@ package com.debut;
 public class Test {
     public static void main(String[] args) {
         // write your code here
+        MyLinkedList listedebadboys=new MyLinkedList(new Node("jean"),new Node("paul"),new Node("benzema"));
+        listedebadboys.printList();
         MyLinkedList listePrenom=new MyLinkedList();
 
         listePrenom.printList();
